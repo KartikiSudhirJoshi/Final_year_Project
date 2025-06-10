@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}About - Sign Language Converter{% endblock %}
+{% block content %}
+    <div class="about-container">
+        <h1 class="fade-in">About Our Team</h1>
+        <p class="subtitle fade-in">Meet the minds behind Sign Language Converter</p>
+        <div class="team-grid">
+                <div class="card">
+                <img src="{{ url_for('static', filename='images/kartikiabout.jpg') }}" alt="Kartiki">
+                <a href="https://www.linkedin.com/in/kartiki-joshi-a74213261" target="_blank" rel="noopener noreferrer"> <h3>Kartiki                 Joshi</h3></a>
+                <p>ML Engineer</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/preranaabout.jpg') }}" alt="Prerana">
+               <a href="https://www.linkedin.com/in/preranakawade" target="_blank" rel="noopener noreferrer"> <h3>Prerana Kawade</h3></a>
+                <p>Frontend Developer</p>
+            </div>
+            
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/aaryaabout.jpg') }}" alt="Aarya">
+                <a href="https://www.linkedin.com/in/aarya-manjrekar" target="_blank" rel="noopener noreferrer"> <h3>Aarya Manjrekar</h3></a>
+                <p>Documentation Lead</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/rutujaabout.jpg') }}" alt="Rutuja">
+                <a href="https://www.linkedin.com/in/rutuja-pawar27?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"> <h3>Rutuja Pawar</h3></a>
+                <p>Backend Developer</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

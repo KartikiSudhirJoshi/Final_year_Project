@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Home - Sign Language Converter{% endblock %}
+{% block content %}
+    <div class="home-container">
+        <h1 class="fade-in">Sign Language Converter</h1>
+        <p class="subtitle fade-in">Bridging communication with real-time ASL conversion</p>
+        <div class="card-grid">
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/feature1.png') }}" alt="Feature 1">
+                <h3>Instant ASL Detection</h3>
+                <p>Capture and interpret ASL gestures with cutting-edge tech.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/feature2.png') }}" alt="Feature 2">
+                <h3>Voice Your Signs</h3>
+                <p>Turn your gestures into clear, spoken words instantly.</p>
+            </div>
+            <div class="card">
+                <img src="{{ url_for('static', filename='images/feature3.png') }}" alt="Feature 3">
+                <h3>Seamless Integration</h3>
+                <p>Effortlessly blend ASL conversion into your daily life.</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('conversion') }}" class="btn">Try It</a>
+            <a href="{{ url_for('about') }}" class="btn">Learn More</a>
+        </div>
+    </div>
+{% endblock %}

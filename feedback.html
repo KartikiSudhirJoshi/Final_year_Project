@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Feedback - Sign Language Converter{% endblock %}
+
+{% block content %}
+<div class="feedback-container">
+    <h1 class="fade-in">We’d Love Your Feedback</h1>
+    <p class="subtitle fade-in">Help us improve your experience</p>
+
+    <div class="form-container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" class="feedback-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="remark">Your Feedback</label>
+                <textarea id="remark" name="remark" rows="4" required aria-required="true" placeholder="Tell us what you think"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
